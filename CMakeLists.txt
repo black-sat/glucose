@@ -68,11 +68,11 @@ target_compile_options(
   "$<$<CXX_COMPILER_ID:AppleClang>:${CLANG_WARNINGS}>"
 )
 
-add_executable(frontend simp/Main.cc)
-target_link_libraries(frontend PRIVATE glucose ZLIB::ZLIB)
-set_property(TARGET frontend PROPERTY OUTPUT_NAME glucose)
+add_executable(frontend-simp simp/Main.cc)
+target_link_libraries(frontend-simp PRIVATE glucose ZLIB::ZLIB)
+set_property(TARGET frontend-simp PROPERTY OUTPUT_NAME glucose)
 target_compile_options(
-  frontend PRIVATE 
+  frontend-simp PRIVATE 
   -Wno-logical-op-parentheses
 )
 
