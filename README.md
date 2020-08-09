@@ -1,4 +1,4 @@
-# The Glucose SAT Solver
+# The Glucose SAT Solver (repo with CMake build system)
 
 Glucose is based on a new scoring scheme (well, not so new now, it was
 introduced in 2009) for the clause learning mechanism of so called "Modern" SAT
@@ -23,14 +23,26 @@ you want to cite Glucose.
 | LICENSE       |
 | Changelog     |
 
-# To build (release version: without assertions, statically linked, etc):
+# To build (with CMake)
+
+```
+$ cd glucose/
+$ mkdir build && cd build
+$ cmake ..
+$ make
+```
+
+
+# Old Makefile build instructions
 Like minisat....
 
-cd { simp | parallel }
-make rs
+```
+$ cd { simp | parallel }
+$ make rs
+```
 
 # Usage:
 
-in simp directory:      ./glucose --help
+in simp directory (or build/ with CMake):      `./glucose --help`
 
-in parallel directory:  ./glucose-syrup --help
+in parallel directory (or build/ with CMake):  `./glucose-syrup --help`
