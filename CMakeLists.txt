@@ -61,6 +61,7 @@ set(
 
 add_library(glucose ${SIMP_LIB_SRC} ${LIB_SRC})
 target_include_directories(glucose PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+target_compile_options(glucose PRIVATE -DNDEBUG)
 target_compile_features(glucose PUBLIC cxx_std_11)
 target_compile_options(
   glucose PRIVATE 
